@@ -20,8 +20,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetroFitClient {
     private static Retrofit NoAuthClient = null;
-    private static Retrofit AuthClient = null;
-    private static String apiUrl = "https://marketcheck-prod.apigee.net/v1/";
+    //private static String apiUrl = "https://marketcheck-prod.apigee.net/v1/";
+    private static String apiUrl = "https://marketcheck-prod.apigee.net/v1//search?api_key=5ZWbDJVqHfDSReviXSOMyPpW1wQhYo2Z&year=2019&make=ford&model=Edge&radius=10";
     private static Context context = null;
 
     //https://github.com/daimajia/AndroidImageSlider/blob/master/demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fdaimajia%2Fslider%2Fdemo%2FMainActivity.java
@@ -37,7 +37,7 @@ public class RetroFitClient {
      *  Get an instance without authenticating user credentials
      * @return unauthenticated instance
      */
-    public static Retrofit getInstanceNoAuthClient() {
+    public static Retrofit getClient() {
         if(NoAuthClient == null)
         {
             OkHttpClient httpClient = new OkHttpClient.Builder().addInterceptor(new Interceptor() {
