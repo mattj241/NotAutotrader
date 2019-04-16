@@ -21,8 +21,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetroFitClient {
     private static Retrofit NoAuthClient = null;
     private static Retrofit AuthClient = null;
-    private static String apiUrl = "https://accomplistwebapi.azurewebsites.net/api/";
+    private static String apiUrl = "https://marketcheck-prod.apigee.net/v1/";
     private static Context context = null;
+
+    //https://github.com/daimajia/AndroidImageSlider/blob/master/demo%2Fsrc%2Fmain%2Fjava%2Fcom%2Fdaimajia%2Fslider%2Fdemo%2FMainActivity.java
+//    string baseURL = "https://marketcheck-prod.apigee.net/v1/";
+//    string APIkey = "5ZWbDJVqHfDSReviXSOMyPpW1wQhYo2Z";
+//    string standardParams = $"&radius={radius}&zip={zip}&car_type={carType}&seller_type=dealer";
+//    string makeParam = $"&make={make}";
+//    string modelParam = $"&model={model}";
+//    string yearParam = $"&year={year}";
+//    string final = $"search?api_key={APIkey}{standardParams}{yearParam}{makeParam}{modelParam}";
 
     /**
      *  Get an instance without authenticating user credentials
