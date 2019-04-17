@@ -1,25 +1,32 @@
 package com.android.london.notautotrader.Models;
 
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class BaseModel {
 
     @SerializedName("num_found")
     @Expose
-    int numberOfResults;
-
+    private Integer numFound;
     @SerializedName("listings")
     @Expose
-    List<CarListingModel> car;
+    private List<Listing> listings = null;
 
-    public int getNumberOfResults() {
-        return numberOfResults;
+    public Integer getNumFound() {
+        return numFound;
     }
 
-    public List<CarListingModel> getCar() {
-        return car;
+    public void setNumFound(Integer numFound) {
+        this.numFound = numFound;
     }
+
+    public List<Listing> getListings() {
+        return listings;
+    }
+
+    public void setListings(List<Listing> listings) {
+        this.listings = listings;
+    }
+
 }

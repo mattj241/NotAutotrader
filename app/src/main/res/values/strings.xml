@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NotAutoTrader</string>
+
+    <string name="holderHeader">%1$s %2$s %3$s %4$s</string>
 </resources>
