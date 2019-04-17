@@ -1,0 +1,784 @@
+-----------------------------------com.example.Build.java-----------------------------------
+
+package com.example;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Build {
+
+@SerializedName("year")
+@Expose
+private Integer year;
+@SerializedName("make")
+@Expose
+private String make;
+@SerializedName("model")
+@Expose
+private String model;
+@SerializedName("trim")
+@Expose
+private String trim;
+@SerializedName("short_trim")
+@Expose
+private String shortTrim;
+@SerializedName("body_type")
+@Expose
+private String bodyType;
+@SerializedName("vehicle_type")
+@Expose
+private String vehicleType;
+@SerializedName("drivetrain")
+@Expose
+private String drivetrain;
+@SerializedName("fuel_type")
+@Expose
+private String fuelType;
+@SerializedName("engine")
+@Expose
+private String engine;
+@SerializedName("engine_size")
+@Expose
+private Integer engineSize;
+@SerializedName("doors")
+@Expose
+private Integer doors;
+@SerializedName("cylinders")
+@Expose
+private Integer cylinders;
+@SerializedName("made_in")
+@Expose
+private String madeIn;
+@SerializedName("trim_r")
+@Expose
+private String trimR;
+@SerializedName("highway_miles")
+@Expose
+private String highwayMiles;
+@SerializedName("city_miles")
+@Expose
+private String cityMiles;
+
+public Integer getYear() {
+return year;
+}
+
+public void setYear(Integer year) {
+this.year = year;
+}
+
+public String getMake() {
+return make;
+}
+
+public void setMake(String make) {
+this.make = make;
+}
+
+public String getModel() {
+return model;
+}
+
+public void setModel(String model) {
+this.model = model;
+}
+
+public String getTrim() {
+return trim;
+}
+
+public void setTrim(String trim) {
+this.trim = trim;
+}
+
+public String getShortTrim() {
+return shortTrim;
+}
+
+public void setShortTrim(String shortTrim) {
+this.shortTrim = shortTrim;
+}
+
+public String getBodyType() {
+return bodyType;
+}
+
+public void setBodyType(String bodyType) {
+this.bodyType = bodyType;
+}
+
+public String getVehicleType() {
+return vehicleType;
+}
+
+public void setVehicleType(String vehicleType) {
+this.vehicleType = vehicleType;
+}
+
+public String getDrivetrain() {
+return drivetrain;
+}
+
+public void setDrivetrain(String drivetrain) {
+this.drivetrain = drivetrain;
+}
+
+public String getFuelType() {
+return fuelType;
+}
+
+public void setFuelType(String fuelType) {
+this.fuelType = fuelType;
+}
+
+public String getEngine() {
+return engine;
+}
+
+public void setEngine(String engine) {
+this.engine = engine;
+}
+
+public Integer getEngineSize() {
+return engineSize;
+}
+
+public void setEngineSize(Integer engineSize) {
+this.engineSize = engineSize;
+}
+
+public Integer getDoors() {
+return doors;
+}
+
+public void setDoors(Integer doors) {
+this.doors = doors;
+}
+
+public Integer getCylinders() {
+return cylinders;
+}
+
+public void setCylinders(Integer cylinders) {
+this.cylinders = cylinders;
+}
+
+public String getMadeIn() {
+return madeIn;
+}
+
+public void setMadeIn(String madeIn) {
+this.madeIn = madeIn;
+}
+
+public String getTrimR() {
+return trimR;
+}
+
+public void setTrimR(String trimR) {
+this.trimR = trimR;
+}
+
+public String getHighwayMiles() {
+return highwayMiles;
+}
+
+public void setHighwayMiles(String highwayMiles) {
+this.highwayMiles = highwayMiles;
+}
+
+public String getCityMiles() {
+return cityMiles;
+}
+
+public void setCityMiles(String cityMiles) {
+this.cityMiles = cityMiles;
+}
+
+}
+-----------------------------------com.example.Dealer.java-----------------------------------
+
+package com.example;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Dealer {
+
+@SerializedName("id")
+@Expose
+private Integer id;
+@SerializedName("website")
+@Expose
+private String website;
+@SerializedName("name")
+@Expose
+private String name;
+@SerializedName("dealer_type")
+@Expose
+private String dealerType;
+@SerializedName("street")
+@Expose
+private String street;
+@SerializedName("city")
+@Expose
+private String city;
+@SerializedName("state")
+@Expose
+private String state;
+@SerializedName("country")
+@Expose
+private String country;
+@SerializedName("latitude")
+@Expose
+private String latitude;
+@SerializedName("longitude")
+@Expose
+private String longitude;
+@SerializedName("zip")
+@Expose
+private String zip;
+@SerializedName("phone")
+@Expose
+private String phone;
+
+public Integer getId() {
+return id;
+}
+
+public void setId(Integer id) {
+this.id = id;
+}
+
+public String getWebsite() {
+return website;
+}
+
+public void setWebsite(String website) {
+this.website = website;
+}
+
+public String getName() {
+return name;
+}
+
+public void setName(String name) {
+this.name = name;
+}
+
+public String getDealerType() {
+return dealerType;
+}
+
+public void setDealerType(String dealerType) {
+this.dealerType = dealerType;
+}
+
+public String getStreet() {
+return street;
+}
+
+public void setStreet(String street) {
+this.street = street;
+}
+
+public String getCity() {
+return city;
+}
+
+public void setCity(String city) {
+this.city = city;
+}
+
+public String getState() {
+return state;
+}
+
+public void setState(String state) {
+this.state = state;
+}
+
+public String getCountry() {
+return country;
+}
+
+public void setCountry(String country) {
+this.country = country;
+}
+
+public String getLatitude() {
+return latitude;
+}
+
+public void setLatitude(String latitude) {
+this.latitude = latitude;
+}
+
+public String getLongitude() {
+return longitude;
+}
+
+public void setLongitude(String longitude) {
+this.longitude = longitude;
+}
+
+public String getZip() {
+return zip;
+}
+
+public void setZip(String zip) {
+this.zip = zip;
+}
+
+public String getPhone() {
+return phone;
+}
+
+public void setPhone(String phone) {
+this.phone = phone;
+}
+
+}
+-----------------------------------com.example.Example.java-----------------------------------
+
+package com.example;
+
+import java.util.List;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Example {
+
+@SerializedName("num_found")
+@Expose
+private Integer numFound;
+@SerializedName("listings")
+@Expose
+private List<Listing> listings = null;
+
+public Integer getNumFound() {
+return numFound;
+}
+
+public void setNumFound(Integer numFound) {
+this.numFound = numFound;
+}
+
+public List<Listing> getListings() {
+return listings;
+}
+
+public void setListings(List<Listing> listings) {
+this.listings = listings;
+}
+
+}
+-----------------------------------com.example.FinancingOption.java-----------------------------------
+
+package com.example;
+
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class FinancingOption {
+
+@SerializedName("loan_term")
+@Expose
+private Integer loanTerm;
+@SerializedName("loan_apr")
+@Expose
+private Integer loanApr;
+@SerializedName("down_payment_percentage")
+@Expose
+private Integer downPaymentPercentage;
+
+public Integer getLoanTerm() {
+return loanTerm;
+}
+
+public void setLoanTerm(Integer loanTerm) {
+this.loanTerm = loanTerm;
+}
+
+public Integer getLoanApr() {
+return loanApr;
+}
+
+public void setLoanApr(Integer loanApr) {
+this.loanApr = loanApr;
+}
+
+public Integer getDownPaymentPercentage() {
+return downPaymentPercentage;
+}
+
+public void setDownPaymentPercentage(Integer downPaymentPercentage) {
+this.downPaymentPercentage = downPaymentPercentage;
+}
+
+}
+-----------------------------------com.example.Listing.java-----------------------------------
+
+package com.example;
+
+import java.util.List;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Listing {
+
+@SerializedName("id")
+@Expose
+private String id;
+@SerializedName("vin")
+@Expose
+private String vin;
+@SerializedName("heading")
+@Expose
+private String heading;
+@SerializedName("price")
+@Expose
+private Integer price;
+@SerializedName("msrp")
+@Expose
+private Integer msrp;
+@SerializedName("data_source")
+@Expose
+private String dataSource;
+@SerializedName("vdp_url")
+@Expose
+private String vdpUrl;
+@SerializedName("carfax_1_owner")
+@Expose
+private Boolean carfax1Owner;
+@SerializedName("carfax_clean_title")
+@Expose
+private Boolean carfaxCleanTitle;
+@SerializedName("exterior_color")
+@Expose
+private String exteriorColor;
+@SerializedName("interior_color")
+@Expose
+private String interiorColor;
+@SerializedName("dom")
+@Expose
+private Integer dom;
+@SerializedName("dom_180")
+@Expose
+private Integer dom180;
+@SerializedName("dom_active")
+@Expose
+private Integer domActive;
+@SerializedName("seller_type")
+@Expose
+private String sellerType;
+@SerializedName("inventory_type")
+@Expose
+private String inventoryType;
+@SerializedName("stock_no")
+@Expose
+private String stockNo;
+@SerializedName("last_seen_at")
+@Expose
+private Integer lastSeenAt;
+@SerializedName("last_seen_at_date")
+@Expose
+private String lastSeenAtDate;
+@SerializedName("scraped_at")
+@Expose
+private Integer scrapedAt;
+@SerializedName("scraped_at_date")
+@Expose
+private String scrapedAtDate;
+@SerializedName("first_seen_at")
+@Expose
+private Integer firstSeenAt;
+@SerializedName("first_seen_at_date")
+@Expose
+private String firstSeenAtDate;
+@SerializedName("ref_price")
+@Expose
+private Integer refPrice;
+@SerializedName("ref_price_dt")
+@Expose
+private Integer refPriceDt;
+@SerializedName("source")
+@Expose
+private String source;
+@SerializedName("media")
+@Expose
+private Media media;
+@SerializedName("dealer")
+@Expose
+private Dealer dealer;
+@SerializedName("build")
+@Expose
+private Build build;
+@SerializedName("financing_options")
+@Expose
+private List<FinancingOption> financingOptions = null;
+
+public String getId() {
+return id;
+}
+
+public void setId(String id) {
+this.id = id;
+}
+
+public String getVin() {
+return vin;
+}
+
+public void setVin(String vin) {
+this.vin = vin;
+}
+
+public String getHeading() {
+return heading;
+}
+
+public void setHeading(String heading) {
+this.heading = heading;
+}
+
+public Integer getPrice() {
+return price;
+}
+
+public void setPrice(Integer price) {
+this.price = price;
+}
+
+public Integer getMsrp() {
+return msrp;
+}
+
+public void setMsrp(Integer msrp) {
+this.msrp = msrp;
+}
+
+public String getDataSource() {
+return dataSource;
+}
+
+public void setDataSource(String dataSource) {
+this.dataSource = dataSource;
+}
+
+public String getVdpUrl() {
+return vdpUrl;
+}
+
+public void setVdpUrl(String vdpUrl) {
+this.vdpUrl = vdpUrl;
+}
+
+public Boolean getCarfax1Owner() {
+return carfax1Owner;
+}
+
+public void setCarfax1Owner(Boolean carfax1Owner) {
+this.carfax1Owner = carfax1Owner;
+}
+
+public Boolean getCarfaxCleanTitle() {
+return carfaxCleanTitle;
+}
+
+public void setCarfaxCleanTitle(Boolean carfaxCleanTitle) {
+this.carfaxCleanTitle = carfaxCleanTitle;
+}
+
+public String getExteriorColor() {
+return exteriorColor;
+}
+
+public void setExteriorColor(String exteriorColor) {
+this.exteriorColor = exteriorColor;
+}
+
+public String getInteriorColor() {
+return interiorColor;
+}
+
+public void setInteriorColor(String interiorColor) {
+this.interiorColor = interiorColor;
+}
+
+public Integer getDom() {
+return dom;
+}
+
+public void setDom(Integer dom) {
+this.dom = dom;
+}
+
+public Integer getDom180() {
+return dom180;
+}
+
+public void setDom180(Integer dom180) {
+this.dom180 = dom180;
+}
+
+public Integer getDomActive() {
+return domActive;
+}
+
+public void setDomActive(Integer domActive) {
+this.domActive = domActive;
+}
+
+public String getSellerType() {
+return sellerType;
+}
+
+public void setSellerType(String sellerType) {
+this.sellerType = sellerType;
+}
+
+public String getInventoryType() {
+return inventoryType;
+}
+
+public void setInventoryType(String inventoryType) {
+this.inventoryType = inventoryType;
+}
+
+public String getStockNo() {
+return stockNo;
+}
+
+public void setStockNo(String stockNo) {
+this.stockNo = stockNo;
+}
+
+public Integer getLastSeenAt() {
+return lastSeenAt;
+}
+
+public void setLastSeenAt(Integer lastSeenAt) {
+this.lastSeenAt = lastSeenAt;
+}
+
+public String getLastSeenAtDate() {
+return lastSeenAtDate;
+}
+
+public void setLastSeenAtDate(String lastSeenAtDate) {
+this.lastSeenAtDate = lastSeenAtDate;
+}
+
+public Integer getScrapedAt() {
+return scrapedAt;
+}
+
+public void setScrapedAt(Integer scrapedAt) {
+this.scrapedAt = scrapedAt;
+}
+
+public String getScrapedAtDate() {
+return scrapedAtDate;
+}
+
+public void setScrapedAtDate(String scrapedAtDate) {
+this.scrapedAtDate = scrapedAtDate;
+}
+
+public Integer getFirstSeenAt() {
+return firstSeenAt;
+}
+
+public void setFirstSeenAt(Integer firstSeenAt) {
+this.firstSeenAt = firstSeenAt;
+}
+
+public String getFirstSeenAtDate() {
+return firstSeenAtDate;
+}
+
+public void setFirstSeenAtDate(String firstSeenAtDate) {
+this.firstSeenAtDate = firstSeenAtDate;
+}
+
+public Integer getRefPrice() {
+return refPrice;
+}
+
+public void setRefPrice(Integer refPrice) {
+this.refPrice = refPrice;
+}
+
+public Integer getRefPriceDt() {
+return refPriceDt;
+}
+
+public void setRefPriceDt(Integer refPriceDt) {
+this.refPriceDt = refPriceDt;
+}
+
+public String getSource() {
+return source;
+}
+
+public void setSource(String source) {
+this.source = source;
+}
+
+public Media getMedia() {
+return media;
+}
+
+public void setMedia(Media media) {
+this.media = media;
+}
+
+public Dealer getDealer() {
+return dealer;
+}
+
+public void setDealer(Dealer dealer) {
+this.dealer = dealer;
+}
+
+public Build getBuild() {
+return build;
+}
+
+public void setBuild(Build build) {
+this.build = build;
+}
+
+public List<FinancingOption> getFinancingOptions() {
+return financingOptions;
+}
+
+public void setFinancingOptions(List<FinancingOption> financingOptions) {
+this.financingOptions = financingOptions;
+}
+
+}
+-----------------------------------com.example.Media.java-----------------------------------
+
+package com.example;
+
+import java.util.List;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+public class Media {
+
+@SerializedName("photo_links")
+@Expose
+private List<String> photoLinks = null;
+
+public List<String> getPhotoLinks() {
+return photoLinks;
+}
+
+public void setPhotoLinks(List<String> photoLinks) {
+this.photoLinks = photoLinks;
+}
+
+}

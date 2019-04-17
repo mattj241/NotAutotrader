@@ -38,4 +38,36 @@ public class CarListingModel {
     @SerializedName("build")
     @Expose
     private List<CarSpecsModel> specs;
+
+    public String getVin() {
+        return vin;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getSalePrice() {
+        return salePrice;
+    }
+
+    public int getMsrpPrice() {
+        return msrpPrice;
+    }
+
+    public String getListingUrl() {
+        return listingUrl;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public List<CarPictures> getPictures() {
+        return pictures;
+    }
+
+    public List<CarSpecsModel> getSpecs() {
+        return specs;
+    }
 }

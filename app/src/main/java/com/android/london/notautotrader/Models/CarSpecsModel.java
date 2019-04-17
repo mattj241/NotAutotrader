@@ -32,4 +32,32 @@ public class CarSpecsModel {
     @SerializedName("body_type")
     @Expose
     private String bodyType;
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getMake() {
+        return make;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getTrim() {
+        return trim;
+    }
+
+    public String getDrivetrain() {
+        return drivetrain;
+    }
+
+    public String getEngine() {
+        return engine;
+    }
+
+    public String getBodyType() {
+        return bodyType;
+    }
 }

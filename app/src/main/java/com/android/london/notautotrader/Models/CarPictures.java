@@ -10,4 +10,8 @@ public class CarPictures {
     @SerializedName("photo_links")
     @Expose
     private List<String> photoLinks;
+
+    public List<String> getPhotoLinks() {
+        return photoLinks;
+    }
 }

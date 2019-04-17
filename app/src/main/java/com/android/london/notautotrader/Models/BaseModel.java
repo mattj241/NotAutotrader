@@ -14,4 +14,12 @@ public class BaseModel {
     @SerializedName("listings")
     @Expose
     List<CarListingModel> car;
+
+    public int getNumberOfResults() {
+        return numberOfResults;
+    }
+
+    public List<CarListingModel> getCar() {
+        return car;
+    }
 }
