@@ -1,6 +1,8 @@
 package com.android.london.notautotrader;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.london.notautotrader.Fragments.WelcomeFragment;
 import com.android.london.notautotrader.Models.BaseModel;
 
 import java.util.List;
@@ -31,27 +34,31 @@ public class MainActivity extends AppCompatActivity {
         context = this;
         mainActivity = this;
         setContentView(R.layout.activity_main);
-        testBtn = findViewById(R.id.button);
-        testBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ApiTemplate api = RetroFitClient.getClient().create(ApiTemplate.class);
-                api.GetResults("5ZWbDJVqHfDSReviXSOMyPpW1wQhYo2Z", "2015", "Ford", "Edge", "48176", 10).enqueue(new Callback<BaseModel>() {
-                    @Override
-                    public void onResponse(Call<BaseModel> call, Response<BaseModel>response) {
-                        if(response.isSuccessful()){
-                            baseQueryResults = response.body();
-                            startActivity(new Intent(context, ResultList.class));
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<BaseModel> call, Throwable t) {
-
-                    }
-                });
-            }
-        });
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .add(R.id.fragmentLayout, new WelcomeFragment())
+                .commit();
+//        testBtn = findViewById(R.id.queryBtn);
+//        testBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                ApiTemplate api = RetroFitClient.getClient().create(ApiTemplate.class);
+//                api.GetResults("5ZWbDJVqHfDSReviXSOMyPpW1wQhYo2Z", "2015", "Ford", "Edge", "48176", 10).enqueue(new Callback<BaseModel>() {
+//                    @Override
+//                    public void onResponse(Call<BaseModel> call, Response<BaseModel>response) {
+//                        if(response.isSuccessful()){
+//                            baseQueryResults = response.body();
+//                            startActivity(new Intent(context, ResultList.class));
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<BaseModel> call, Throwable t) {
+//
+//                    }
+//                });
+//            }
+//        });
     }
 
     public static BaseModel getQueryResults(){
