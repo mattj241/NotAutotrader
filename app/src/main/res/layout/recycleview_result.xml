@@ -6,28 +6,32 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/Base"
         android:layout_width="0dp"
         android:layout_height="150dp"
+        android:background="@drawable/border"
+        android:focusable="true"
+        android:onClick="onClick"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/border">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/CarPic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingLeft="10dp"
-
             android:layout_weight="60"
+            android:focusable="false"
+            android:paddingLeft="10dp"
             android:scaleType="fitCenter"
             tools:srcCompat="@mipmap/noimage" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="40">
+            android:layout_weight="40"
+            android:focusable="false">
 
             <TextView
                 android:id="@+id/Header"
@@ -77,52 +81,52 @@
 
 
         <!--<TableLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_weight="40">-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="40">-->
 
-            <!--<TableRow-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent">-->
+        <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/Header"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="60"-->
-                    <!--android:lineSpacingExtra="10sp"-->
-                    <!--android:text="2019 Ford Edge"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:textSize="24sp" />-->
-            <!--</TableRow>-->
+        <!--<TextView-->
+        <!--android:id="@+id/Header"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="60"-->
+        <!--android:lineSpacingExtra="10sp"-->
+        <!--android:text="2019 Ford Edge"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="24sp" />-->
+        <!--</TableRow>-->
 
-            <!--<TableRow-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent">-->
+        <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/Miles"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="60"-->
-                    <!--android:text="40,000 Miles"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:textSize="24sp" />-->
-            <!--</TableRow>-->
+        <!--<TextView-->
+        <!--android:id="@+id/Miles"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="60"-->
+        <!--android:text="40,000 Miles"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="24sp" />-->
+        <!--</TableRow>-->
 
-            <!--<TableRow-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="match_parent">-->
+        <!--<TableRow-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
 
-                <!--<TextView-->
-                    <!--android:id="@+id/Price"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="60"-->
-                    <!--android:text="$35,000"-->
-                    <!--android:textAlignment="center"-->
-                    <!--android:textSize="24sp" />-->
-            <!--</TableRow>-->
+        <!--<TextView-->
+        <!--android:id="@+id/Price"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="60"-->
+        <!--android:text="$35,000"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="24sp" />-->
+        <!--</TableRow>-->
         <!--</TableLayout>-->
 
     </LinearLayout>

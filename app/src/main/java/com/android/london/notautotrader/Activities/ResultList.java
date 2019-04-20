@@ -1,12 +1,15 @@
 package com.android.london.notautotrader.Activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.android.london.notautotrader.Fragments.SimpleQueryFragment;
 import com.android.london.notautotrader.Models.BaseModel;
+import com.android.london.notautotrader.Models.Listing;
 import com.android.london.notautotrader.R;
 import com.android.london.notautotrader.TaskAdapter;
+import com.google.gson.Gson;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,5 +41,6 @@ public class ResultList extends AppCompatActivity {
         recyclerView.setAdapter(taskAdapter);
         taskAdapter.notifyDataSetChanged();
     }
+
 
 }
