@@ -78,9 +78,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
         String formattedPrice,customHeader = context.getResources().getString(R.string.holderHeader,
                 result.getBuild().getYear().toString(),
                 result.getBuild().getMake(),
-                result.getBuild().getModel(),
-                ""/*result.getBuild().getTrim()*/);
-        //holder.base.setTag(position);
+                result.getBuild().getModel());
         holder.header.setText(customHeader);
         if (result.getPrice() == null){
             formattedPrice = "Unlisted Price";

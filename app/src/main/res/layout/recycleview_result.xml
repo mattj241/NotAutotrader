@@ -21,7 +21,7 @@
             android:id="@+id/CarPic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="60"
+            android:layout_weight="65"
             android:focusable="false"
             android:paddingLeft="10dp"
             android:scaleType="fitCenter"
@@ -30,7 +30,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="40"
+            android:layout_weight="35"
             android:focusable="false">
 
             <TextView
@@ -41,7 +41,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/roboto_slab"
-                android:text="TextView"
+                android:text="2019 Lamborgini Aventador"
                 android:textAlignment="center"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/roboto_slab"
                 android:text="@string/unlistedMiles"
@@ -68,7 +68,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="17dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/roboto_slab"
                 android:text="@string/unlistedPrice"

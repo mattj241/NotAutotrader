@@ -16,10 +16,17 @@ import java.util.List;
 public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private List<String>  imageUrls;
+    private boolean hasPics;
 
     public ViewPagerAdapter(Context context, List<String> imageUrls) {
         this.context = context;
         this.imageUrls = imageUrls;
+        if (this.imageUrls.size() < 1){
+            hasPics = false;
+        }
+        else{
+            hasPics = true;
+        }
     }
 
     @Override
@@ -36,11 +43,20 @@ public class ViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         ImageView imageView = new ImageView(context);
-        Picasso.get()
-                .load(imageUrls.get(position))
-                .fit()
-                .into(imageView);
-        container.addView(imageView);
+        if (!hasPics) {
+            Picasso.get()
+                    .load(R.mipmap.noimage)
+                    .fit()
+                    .into(imageView);
+            container.addView(imageView);
+        }
+        else {
+            Picasso.get()
+                    .load(imageUrls.get(position))
+                    .fit()
+                    .into(imageView);
+            container.addView(imageView);
+        }
 
         return imageView;
     }

@@ -1,11 +1,22 @@
 <resources>
     <string name="app_name">NotAutoTrader</string>
 
-    <string name="holderHeader">%1$s %2$s %3$s %4$s</string>
+    <string name="holderHeader">%1$s %2$s %3$s</string>
     <string name="welcome">Welcome to Not-Autotrader\nLet\'s find you a car!</string>
     <string name="welcomeBtn">Find your car   ></string>
     <string name="findYourCar">Find your next car</string>
     <string name="unlistedMiles">Unlisted Miles</string>
     <string name="unlistedPrice">Unlisted Price</string>
-    <string name="help">Scroll right to view pictures</string>
+    <string name="unlistedBodytype">Unlisted Body Type</string>
+    <string name="unlistedDrivetrain">Unlisted Drivetrain</string>
+    <string name="unlistedEngine">Unlisted Engine Type</string>
+    <string name="unlistedExterior">Unlisted Exterior Color</string>
+    <string name="unlistedInterior">Unlisted Interior Color</string>
+    <string name="helpScroll">Scroll right to view pictures</string>
+
+    <string name="exterior">Exterior Color: %1$s</string>
+    <string name="interior">Interior Color: %1$s</string>
+    <string name="body">Body Type: %1$s</string>
+    <string name="drivetrain">Drivetrain: %1$s</string>
+    <string name="engine">Engine: %1$s</string>
 </resources>

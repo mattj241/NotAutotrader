@@ -7,14 +7,92 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/placeholder_engine"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/unlistedEngine"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_drivetrain" />
+
+    <TextView
+        android:id="@+id/placeholder_drivetrain"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/unlistedDrivetrain"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_bodyType" />
+
+    <TextView
+        android:id="@+id/placeholder_InteriorColor"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="135dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/unlistedInterior"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_ExteriorColor" />
+
+    <TextView
+        android:id="@+id/placeholder_bodyType"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/unlistedBodytype"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_InteriorColor" />
+
+    <TextView
+        android:id="@+id/placeholder_ExteriorColor"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="135dp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="@string/unlistedExterior"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_price" />
+
+    <TextView
         android:id="@+id/detailedHeader"
-        android:layout_width="379dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/roboto_slab"
-        android:text="Placeholder_header"
+        android:text="2019 Ford Edge Titanium Crossover Twin-Scroll EcoBoost Engine"
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +141,7 @@
         android:layout_marginTop="11dp"
         android:layout_marginEnd="126dp"
         android:fontFamily="@font/roboto_slab"
-        android:text="@string/help"
+        android:text="@string/helpScroll"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,14 +149,14 @@
 
     <Button
         android:id="@+id/urlBtn"
-        android:layout_width="382dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="17dp"
         android:text="Vist Web Listing"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeholder_engine" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
