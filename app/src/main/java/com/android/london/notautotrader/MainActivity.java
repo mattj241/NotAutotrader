@@ -23,10 +23,8 @@ import javax.xml.transform.Result;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button testBtn;
     Context context;
     static MainActivity mainActivity;
-    static BaseModel baseQueryResults;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,30 +36,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.beginTransaction()
                 .add(R.id.fragmentLayout, new WelcomeFragment())
                 .commit();
-//        testBtn = findViewById(R.id.queryBtn);
-//        testBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                ApiTemplate api = RetroFitClient.getClient().create(ApiTemplate.class);
-//                api.GetResults("5ZWbDJVqHfDSReviXSOMyPpW1wQhYo2Z", "2015", "Ford", "Edge", "48176", 10).enqueue(new Callback<BaseModel>() {
-//                    @Override
-//                    public void onResponse(Call<BaseModel> call, Response<BaseModel>response) {
-//                        if(response.isSuccessful()){
-//                            baseQueryResults = response.body();
-//                            startActivity(new Intent(context, ResultList.class));
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<BaseModel> call, Throwable t) {
-//
-//                    }
-//                });
-//            }
-//        });
-    }
 
-    public static BaseModel getQueryResults(){
-        return baseQueryResults;
     }
 }

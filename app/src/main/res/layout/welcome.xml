@@ -12,11 +12,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="368dp"
         android:fontFamily="sans-serif-medium"
+        android:text="@string/welcomeBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="@string/welcomeBtn" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView"
