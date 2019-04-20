@@ -2,7 +2,7 @@
  * TODO:
  */
 
-package com.android.london.notautotrader;
+package com.android.london.notautotrader.Networking;
 
 import android.content.Context;
 import android.os.Handler;

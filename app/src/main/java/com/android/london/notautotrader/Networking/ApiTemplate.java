@@ -1,4 +1,4 @@
-package com.android.london.notautotrader;
+package com.android.london.notautotrader.Networking;
 
 import com.android.london.notautotrader.Models.BaseModel;
 

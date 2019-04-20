@@ -64,31 +64,37 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.MyViewHolder> 
                 result.getBuild().getModel(),
                 ""/*result.getBuild().getTrim()*/);
 
+        String formattedPrice;
         holder.header.setText(customHeader);
-        String formattedPrice = result.getPrice().toString();
-        if (formattedPrice.contains(".0")){
-            formattedPrice = formattedPrice.replace(".0", "");
-            formattedPrice = "$"+formattedPrice;
+        if (result.getPrice() == null){
+            formattedPrice = "Unlisted Price";
         }
-        holder.price.setText(formattedPrice);
-        try
-        {
-            String formattedMiles = result.getMiles().toString();
-            if (formattedMiles.contains(".0")){
-                formattedMiles = formattedMiles.replace(".0", "");
+        else{
+            formattedPrice = result.getPrice().toString();
+            if (formattedPrice.contains(".0")){
+                formattedPrice = formattedPrice.replace(".0", "");
+                formattedPrice = "$"+formattedPrice;
             }
-            formattedMiles += " miles";
-            holder.miles.setText(formattedMiles);
-        }
-        catch ( NullPointerException e ){
-            holder.miles.setText("No miles!");
+            holder.price.setText(formattedPrice);
+            try
+            {
+                String formattedMiles = result.getMiles().toString();
+                if (formattedMiles.contains(".0")){
+                    formattedMiles = formattedMiles.replace(".0", "");
+                }
+                formattedMiles += " miles";
+                holder.miles.setText(formattedMiles);
+            }
+            catch ( NullPointerException e ){
+                holder.miles.setText("No miles!");
+            }
         }
 
         List<String> photoLinks = result.getMedia().getPhotoLinks();
         if (!photoLinks.isEmpty()){
             Picasso.get().load(photoLinks.get(0)).into(holder.profilePic);
         }
-        else {
+        else{
             holder.profilePic.setImageResource(R.mipmap.noimage);
         }
     }

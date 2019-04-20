@@ -7,75 +7,123 @@
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="138dp"
+        android:layout_height="150dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/border">
 
         <ImageView
             android:id="@+id/CarPic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingLeft="10dp"
 
             android:layout_weight="60"
-            tools:srcCompat="https://pictures.dealer.com/b/briarwoodfordfd/0476/737d0f256991f277484322614795cf1ax.jpg" />
+            android:scaleType="fitCenter"
+            tools:srcCompat="@mipmap/noimage" />
 
-        <TableLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="40">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/Header"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="60"
-                    android:text="2019 Ford Edge"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-            </TableRow>
+            <TextView
+                android:id="@+id/Miles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="@string/unlistedMiles"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Header" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/Price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="@string/unlistedPrice"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Miles" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <TextView
-                    android:id="@+id/Miles"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="60"
-                    android:text="40,000 Miles"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-            </TableRow>
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/Price"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="60"
-                    android:text="$35,000"
-                    android:textAlignment="center"
-                    android:textSize="24sp" />
-            </TableRow>
+        <!--<TableLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="40">-->
 
             <!--<TableRow-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent" />-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/Header"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="60"-->
+                    <!--android:lineSpacingExtra="10sp"-->
+                    <!--android:text="2019 Ford Edge"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textSize="24sp" />-->
+            <!--</TableRow>-->
 
             <!--<TableRow-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent" />-->
-        </TableLayout>
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/Miles"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="60"-->
+                    <!--android:text="40,000 Miles"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textSize="24sp" />-->
+            <!--</TableRow>-->
+
+            <!--<TableRow-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/Price"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_weight="60"-->
+                    <!--android:text="$35,000"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textSize="24sp" />-->
+            <!--</TableRow>-->
+        <!--</TableLayout>-->
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

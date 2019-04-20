@@ -1,10 +1,12 @@
-package com.android.london.notautotrader;
+package com.android.london.notautotrader.Activities;
 
 import android.content.Context;
 import android.os.Bundle;
 
 import com.android.london.notautotrader.Fragments.SimpleQueryFragment;
 import com.android.london.notautotrader.Models.BaseModel;
+import com.android.london.notautotrader.R;
+import com.android.london.notautotrader.TaskAdapter;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

@@ -37,6 +37,7 @@ public class CarData {
                 String BMW[] = {"1 Series M", "128i", "228i", "318i", "428i", "524td",
                 "633CSI", "733i", "840ci", "M2", "M3", "M4", "M5", "M6", "X3",
                 "X5", "X7"};
+                return BMW;
             case "Bugatti":
                 String Bugatti[] = {"Chiron", "Veyron"};
                 return Bugatti;
@@ -60,6 +61,7 @@ public class CarData {
             case "Chrysler":
                 String FCA[] = {"200", "300", "Aspen", "Crossfire", "Intrepid",
                         "Pacifica", "PT Cruiser", "Sebring", "Town & Country"};
+                return FCA;
             case "Dodge":
                 String Dodge[] = {"Avenger", "Caliber", "Caravan", "Challenger",
                 "Charger", "Dart", "Daytona", "Durango", "Grand Caravan", "Magnum",

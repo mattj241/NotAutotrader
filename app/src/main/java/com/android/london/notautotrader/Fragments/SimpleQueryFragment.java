@@ -14,12 +14,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.london.notautotrader.ApiTemplate;
+import com.android.london.notautotrader.Networking.ApiTemplate;
 import com.android.london.notautotrader.CarData;
 import com.android.london.notautotrader.Models.BaseModel;
 import com.android.london.notautotrader.R;
-import com.android.london.notautotrader.ResultList;
-import com.android.london.notautotrader.RetroFitClient;
+import com.android.london.notautotrader.Activities.ResultList;
+import com.android.london.notautotrader.Networking.RetroFitClient;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -93,7 +93,7 @@ public class SimpleQueryFragment extends Fragment {
                             modelSpinner.getSelectedItem().toString().isEmpty() ||
                             zipBox.getText().toString().isEmpty() ||
                             radiusBox.getText().toString().isEmpty()){
-                        Toast.makeText(view.getContext(), "Not all fields are full",
+                        Toast.makeText(view.getContext(), "Not all fields are used",
                                 Toast.LENGTH_SHORT).show();
                     }
                     else{
@@ -109,7 +109,7 @@ public class SimpleQueryFragment extends Fragment {
                             modelSpinner.getSelectedItem().toString().isEmpty() ||
                             zipBox.getText().toString().isEmpty() ||
                             radiusBox.getText().toString().isEmpty()){
-                        Toast.makeText(view.getContext(), "Not all fields are full",
+                        Toast.makeText(view.getContext(), "Not all fields are used",
                                 Toast.LENGTH_SHORT).show();
                     }
                     else {
@@ -158,6 +158,10 @@ public class SimpleQueryFragment extends Fragment {
                         baseQueryResults = response.body();
                         startActivity(new Intent(getContext(), ResultList.class));
                     }
+                    else{
+                        Toast.makeText(getContext(), "No results found",
+                                Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 
@@ -177,6 +181,10 @@ public class SimpleQueryFragment extends Fragment {
                 if (response.body().getNumFound() > 0){
                     baseQueryResults = response.body();
                     startActivity(new Intent(getContext(), ResultList.class));
+                }
+                else{
+                    Toast.makeText(getContext(), "No results found",
+                            Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -5,4 +5,6 @@
     <string name="welcome">Welcome to Not-Autotrader\nLet\'s find you a car!</string>
     <string name="welcomeBtn">Find your car   ></string>
     <string name="findYourCar">Find your next car</string>
+    <string name="unlistedMiles">Unlisted Miles</string>
+    <string name="unlistedPrice">Unlisted Price</string>
 </resources>
