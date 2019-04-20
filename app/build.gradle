@@ -34,4 +34,5 @@ dependencies {
     implementation 'com.daimajia.slider:library:1.1.5@aar'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
 }
