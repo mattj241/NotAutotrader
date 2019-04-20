@@ -23,12 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="27dp"
+        android:layout_marginBottom="140dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Condition"
         android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/makeSpinner" />
+        app:layout_constraintBottom_toTopOf="@+id/zipText"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/miles"
@@ -46,25 +46,24 @@
         android:id="@+id/modelSpinner"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="192dp"
-        app:layout_constraintBottom_toTopOf="@+id/zipText"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="87dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/makeSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/modelText" />
 
     <TextView
         android:id="@+id/modelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="204dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="34dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Model"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/modelSpinner"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/makeText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/queryBtn"
@@ -83,21 +82,21 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="192dp"
-        app:layout_constraintBottom_toTopOf="@+id/zipText"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeText" />
 
     <TextView
         android:id="@+id/makeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginTop="34dp"
         android:fontFamily="@font/roboto_slab"
         android:text="Make"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/makeSpinner"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/zipBox"
@@ -127,10 +126,9 @@
 
     <EditText
         android:id="@+id/YearBox"
-        android:layout_width="72dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="104dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
         android:ems="10"
         android:fontFamily="@font/roboto_slab"
         android:hint="ex. 2015"
@@ -142,13 +140,13 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="378dp"
-        android:layout_height="95dp"
+        android:layout_height="121dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="13dp"
         android:layout_marginEnd="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/condition" >
+        app:layout_constraintTop_toBottomOf="@+id/condition">
 
         <RadioButton
             android:id="@+id/newRadioBtn"

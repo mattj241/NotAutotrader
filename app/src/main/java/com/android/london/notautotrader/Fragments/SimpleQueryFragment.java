@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.london.notautotrader.ApiTemplate;
 import com.android.london.notautotrader.CarData;
@@ -50,13 +52,26 @@ public class SimpleQueryFragment extends Fragment {
         makeSpinner = view.findViewById(R.id.makeSpinner);
         modelSpinner = view.findViewById(R.id.modelSpinner);
         populateMakeSpinner();
+        makeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (!makeSpinner.getSelectedItem().toString().equals("Select")){
+                    populateModelSpinner(makeSpinner.getSelectedItem().toString());
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         newBtn = view.findViewById(R.id.newRadioBtn);
         usedBtn = view.findViewById(R.id.usedRadioBtn);
         usedBtn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b){
+            public void onCheckedChanged(CompoundButton compoundButton, boolean selected) {
+                if (selected){
                     yearBox.setVisibility(View.VISIBLE);
                 }
                 else{
@@ -73,17 +88,36 @@ public class SimpleQueryFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if (usedBtn.isChecked()){
-                    QueryUsed(yearBox.getText().toString(),
-                            makeSpinner.getSelectedItem().toString(),
-                            modelSpinner.getSelectedItem().toString(),
-                            zipBox.getText().toString(),
-                            Integer.parseInt(radiusBox.getText().toString()));
+                    if (yearBox.getText().toString().isEmpty() ||
+                            makeSpinner.getSelectedItem().toString().isEmpty() ||
+                            modelSpinner.getSelectedItem().toString().isEmpty() ||
+                            zipBox.getText().toString().isEmpty() ||
+                            radiusBox.getText().toString().isEmpty()){
+                        Toast.makeText(view.getContext(), "Not all fields are full",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        QueryUsed(yearBox.getText().toString(),
+                                makeSpinner.getSelectedItem().toString(),
+                                modelSpinner.getSelectedItem().toString(),
+                                zipBox.getText().toString(),
+                                Integer.parseInt(radiusBox.getText().toString()));
+                    }
                 }
                 else{
-                    QueryNew(makeSpinner.getSelectedItem().toString(),
-                            modelSpinner.getSelectedItem().toString(),
-                            zipBox.getText().toString(),
-                            Integer.parseInt(radiusBox.getText().toString()));
+                    if (makeSpinner.getSelectedItem().toString().isEmpty() ||
+                            modelSpinner.getSelectedItem().toString().isEmpty() ||
+                            zipBox.getText().toString().isEmpty() ||
+                            radiusBox.getText().toString().isEmpty()){
+                        Toast.makeText(view.getContext(), "Not all fields are full",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        QueryNew(makeSpinner.getSelectedItem().toString(),
+                                modelSpinner.getSelectedItem().toString(),
+                                zipBox.getText().toString(),
+                                Integer.parseInt(radiusBox.getText().toString()));
+                    }
                 }
             }
         });
@@ -99,6 +133,18 @@ public class SimpleQueryFragment extends Fragment {
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.simple_spinner_item, spinnerContents);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         makeSpinner.setAdapter(arrayAdapter);
+
+    }
+
+    private void populateModelSpinner(String make){
+        String[] Models = CarData.getModels(make);
+        List<String> spinnerContents = new ArrayList<>();
+        for(String models: Models){
+            spinnerContents.add(models);
+        }
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this.getContext(), android.R.layout.simple_spinner_item, spinnerContents);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        modelSpinner.setAdapter(arrayAdapter);
     }
 
     private void QueryUsed(String Year, String Make, String Model, String Zip, int Radius) {
@@ -108,8 +154,10 @@ public class SimpleQueryFragment extends Fragment {
             @Override
             public void onResponse(Call<BaseModel> call, Response<BaseModel> response) {
                 if(response.isSuccessful()){
-                    baseQueryResults = response.body();
-                    startActivity(new Intent(getContext(), ResultList.class));
+                    if (response.body().getNumFound() > 0){
+                        baseQueryResults = response.body();
+                        startActivity(new Intent(getContext(), ResultList.class));
+                    }
                 }
             }
 
@@ -126,7 +174,7 @@ public class SimpleQueryFragment extends Fragment {
                 Model, Zip, Radius, "new").enqueue(new Callback<BaseModel>() {
             @Override
             public void onResponse(Call<BaseModel> call, Response<BaseModel> response) {
-                if(response.isSuccessful()){
+                if (response.body().getNumFound() > 0){
                     baseQueryResults = response.body();
                     startActivity(new Intent(getContext(), ResultList.class));
                 }
