@@ -135,7 +135,8 @@ public class DetailedView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, SimpleWebView.class);
-                intent.putExtra("linkTo", myListing.getVdpUrl());
+                intent.putExtra("linkTo", myListing.getVdpUrl())
+                        .putExtra("listing", new Gson().toJson(myListing));
                 startActivity(intent);
             }
         });
