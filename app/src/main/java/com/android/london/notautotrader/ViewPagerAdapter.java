@@ -12,7 +12,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-
+//Helpful credit:
+//https://codinginflow.com/tutorials/android/picasso-image-slider
 public class ViewPagerAdapter extends PagerAdapter {
     private Context context;
     private List<String>  imageUrls;

@@ -43,11 +43,14 @@ public class DetailedView extends AppCompatActivity {
         setContentView(R.layout.activity_detailed);
         String jsonMyObject = "";
         Bundle extras = getIntent().getExtras();
+
+        //Get listing information bundle
         if (extras != null) {
             jsonMyObject = extras.getString("listing");
         }
         final Listing myListing = new Gson().fromJson(jsonMyObject, Listing.class);
 
+        //Initialize image slider
         ViewPager viewPager = findViewById(R.id.imageSlider);
         List<String> PhotoLinks = myListing.getMedia().getPhotoLinks();
         ViewPagerAdapter adapter = new ViewPagerAdapter(this, PhotoLinks);
@@ -60,6 +63,7 @@ public class DetailedView extends AppCompatActivity {
         Miles = findViewById(R.id.placeholder_miles);
         String formattedPrice;
 
+        //handler if essential information is null for whatever reason
         if (myListing.getPrice() == null){
             formattedPrice = "Unlisted Price";
         }
@@ -130,6 +134,7 @@ public class DetailedView extends AppCompatActivity {
             Engine.setText(getString(R.string.engine, engine));
         }
 
+        //launch web view
         urlBtn = findViewById(R.id.urlBtn);
         urlBtn.setOnClickListener(new View.OnClickListener() {
             @Override
